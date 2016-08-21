@@ -1,0 +1,19 @@
+﻿<Properties StartupItem="Sockets/Samples/SocketsSample.XF/SocketsSample.XF.Droid/SocketsSample.XF.Droid.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sockets/Samples/SocketsSample.XF/SocketsSample.XF/App.cs">
+    <Files>
+      <File FileName="Sockets/Sockets.Implementation.NET/TcpSocketClient.cs" Line="23" Column="37" />
+      <File FileName="Sockets/Sockets.Implementation.NET/CommsInterface.cs" Line="32" Column="1" />
+      <File FileName="../../../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/9.8.2.22/lib/mono/2.1/Xamarin.iOS.Common.targets" Line="1" Column="1" />
+      <File FileName="Sockets/Samples/SocketsSample.XF/SocketsSample.XF/SocketExtensions.cs" Line="20" Column="6" />
+      <File FileName="Sockets/Samples/SocketsSample.XF/SocketsSample.XF.Droid/MainActivity.cs" Line="25" Column="1" />
+      <File FileName="Sockets/Samples/SocketsSample.XF/SocketsSample.XF/App.cs" Line="10" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Samples.SocketsSample.XF.Droid PreferredExecutionTarget="Android.Test_6" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Samples.SocketsSample.XF.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.0AFEE0BC-D340-40D7-B221-005E6169C265" />
+</Properties>

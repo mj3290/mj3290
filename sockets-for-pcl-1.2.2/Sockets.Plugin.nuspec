@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="2.8.1">
+    <id>rda.SocketsForPCL</id>
+    <version>1.2.2</version>
+    <title>Sockets Plugin for Xamarin and Windows (PCL)</title>
+    <authors>Ryan Davis</authors>
+    <owners>Ryan Davis</owners>
+    <licenseUrl>https://raw.githubusercontent.com/rdavisau/sockets-for-pcl/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/rdavisau/sockets-for-pcl</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>2015 Ryan Davis</copyright>
+    <iconUrl>https://raw.githubusercontent.com/rdavisau/sockets-for-pcl/master/_meta/icon/icon.png</iconUrl>
+    <releaseNotes>
+1.2.2 (2015-07-27)
+
+Features: 
+
+- `TcpSocketClient` and `TcpSocketListener` now supports setting of the buffer size used when sending data. If unset, this defaults to zero (unbuffered). This also addresses an inconsistency in default buffer sizes between .NET platforms and WinRT platforms. Thanks @xen2
+- `TcpSocketListener` now supports os-based/ephemeral port selection. When passing `0` to the `port` parameter of `StartListeningAsync`, the selection of bound port is deferred to the operating system. You can determine what port was bound by checking the `LocalPort` property. 
+      
+1.2.1 (2015-06-10)
+
+Bugfixes:
+
+- Fixed incorrect assembly version for WP8.
+    </releaseNotes>
+    <description>
+      Cross-platform socket API for Xamarin iOS/Android/Forms, Xamarin.Mac/MonoMac, Windows Phone 8/8.1, Windows Store and Windows Desktop. Includes support for TCP and UDP listeners and clients, as well as UDP multicast.
+    </description>
+    <summary>Cross-platform TCP and UDP socket API for Xamarin iOS/Android/Forms, Xamarin.Mac/MonoMac, Windows Phone 8/8.1, Windows Store and Windows Desktop.</summary>
+    <tags>sockets, tcp, udp, multicast, xamarin, pcl, windows phone, winphone, wp8, winrt, android, xamarin.forms, ios, xamarin.mac, monomac, linqpad-samples</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+
+    <!--Core-->
+    <file src="Sockets\Sockets.Plugin\bin\Release\Sockets.Plugin.dll"
+          target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin\bin\Release\Sockets.Plugin.xml"
+          target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin\bin\Release\Sockets.Plugin.pdb"
+          target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Sockets.Plugin.pdb" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Sockets.Plugin.Abstractions.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.pdb"
+          target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Sockets.Plugin.Abstractions.pdb" />
+
+    <!--Win Phone Silverlight-->
+    <file src="Sockets\Sockets.Plugin.WindowsPhone8\bin\Release\Sockets.Plugin.dll" target="lib\wp8\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin.WindowsPhone8\bin\Release\Sockets.Plugin.xml" target="lib\wp8\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin.WindowsPhone8\bin\Release\Sockets.Plugin.pdb" target="lib\wp8\Sockets.Plugin.pdb" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\wp8\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\wp8\Sockets.Plugin.Abstractions.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.pdb"
+          target="lib\wp8\Sockets.Plugin.Abstractions.pdb" />
+
+    <!--Win Phone 81-->
+    <file src="Sockets\Sockets.Plugin.WindowsPhone81\bin\Release\Sockets.Plugin.dll"
+          target="lib\wpa81\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin.WindowsPhone81\bin\Release\Sockets.Plugin.xml"
+          target="lib\wpa81\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin.WindowsPhone81\bin\Release\Sockets.Plugin.pdb"
+          target="lib\wpa81\Sockets.Plugin.pdb" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\wpa81\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\wpa81\Sockets.Plugin.Abstractions.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.pdb"
+          target="lib\wpa81\Sockets.Plugin.Abstractions.pdb" />
+
+    <!--WinStore-->
+    <file src="Sockets\Sockets.Plugin.WindowsStore\bin\Release\Sockets.Plugin.dll" target="lib\win8\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin.WindowsStore\bin\Release\Sockets.Plugin.xml" target="lib\win8\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin.WindowsStore\bin\Release\Sockets.Plugin.pdb" target="lib\win8\Sockets.Plugin.pdb" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\win8\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\win8\Sockets.Plugin.Abstractions.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.pdb"
+          target="lib\win8\Sockets.Plugin.Abstractions.pdb" />
+
+    <!--Xamarin.Android-->
+    <file src="Sockets\Sockets.Plugin.Android\bin\Release\Sockets.Plugin.dll"
+          target="lib\MonoAndroid10\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin.Android\bin\Release\Sockets.Plugin.xml"
+          target="lib\MonoAndroid10\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin.Android\bin\Release\Sockets.Plugin.pdb"
+          target="lib\MonoAndroid10\Sockets.Plugin.pdb" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\MonoAndroid10\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\MonoAndroid10\Sockets.Plugin.Abstractions.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.pdb"
+          target="lib\MonoAndroid10\Sockets.Plugin.Abstractions.pdb" />
+
+    <!--Xamarin.iOS-->
+    <file src="Sockets\Sockets.Plugin.iOS\bin\iPhone\Release\Sockets.Plugin.dll"
+          target="lib\MonoTouch10\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin.iOS\bin\iPhone\Release\Sockets.Plugin.xml"
+          target="lib\MonoTouch10\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\MonoTouch10\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\MonoTouch10\Sockets.Plugin.Abstractions.xml" />
+
+    <!--Xamarin.iOS Unified-->
+    <file src="Sockets\Sockets.Plugin.iOSUnified\bin\iPhone\Release\Sockets.Plugin.dll"
+          target="lib\Xamarin.iOS10\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin.iOSUnified\bin\iPhone\Release\Sockets.Plugin.xml"
+          target="lib\Xamarin.iOS10\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\Xamarin.iOS10\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\Xamarin.iOS10\Sockets.Plugin.Abstractions.xml" />
+
+    <!--Xamarin.Mac Unified-->
+    <file src="Sockets\Sockets.Plugin.MacUnified\bin\MacUnified\Release\Sockets.Plugin.dll"
+          target="lib\Xamarin.Mac\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin.MacUnified\bin\MacUnified\Release\Sockets.Plugin.xml"
+          target="lib\Xamarin.Mac\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\Xamarin.Mac\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\Xamarin.Mac\Sockets.Plugin.Abstractions.xml" />
+
+    <!--Xamarin.Mac Classic-->
+    <file src="Sockets\Sockets.Plugin.MacClassic\bin\MacClassic\Release\Sockets.Plugin.dll"
+          target="lib\Xamarin.Mac.Classic\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin.MacClassic\bin\MacClassic\Release\Sockets.Plugin.xml"
+          target="lib\Xamarin.Mac.Classic\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\Xamarin.Mac.Classic\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\Xamarin.Mac.Classic\Sockets.Plugin.Abstractions.xml" />
+
+    <!--MonoMac-->
+    <file src="Sockets\Sockets.Plugin.MacOpenSource\bin\MacOpenSource\Release\Sockets.Plugin.dll"
+          target="lib\MonoMac\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin.MacOpenSource\bin\MacOpenSource\Release\Sockets.Plugin.xml"
+          target="lib\MonoMac\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\MonoMac\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\MonoMac\Sockets.Plugin.Abstractions.xml" />
+
+    <!--Windows Desktop-->
+    <file src="Sockets\Sockets.Plugin.WindowsDesktop\bin\Release\Sockets.Plugin.dll"
+          target="lib\net45\Sockets.Plugin.dll" />
+    <file src="Sockets\Sockets.Plugin.WindowsDesktop\bin\Release\Sockets.Plugin.xml"
+          target="lib\net45\Sockets.Plugin.xml" />
+    <file src="Sockets\Sockets.Plugin.WindowsDesktop\bin\Release\Sockets.Plugin.pdb"
+          target="lib\net45\Sockets.Plugin.pdb" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.dll"
+          target="lib\net45\Sockets.Plugin.Abstractions.dll" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.xml"
+          target="lib\net45\Sockets.Plugin.Abstractions.xml" />
+    <file src="Sockets\Sockets.Plugin.Abstractions\bin\Release\Sockets.Plugin.Abstractions.pdb"
+          target="lib\net45\Sockets.Plugin.Abstractions.pdb" />
+
+    <!-- LINQPad Samples -->
+    <file src="Sockets\linqpad-samples\**"
+          target="linqpad-samples"/>
+
+  </files>
+</package>
